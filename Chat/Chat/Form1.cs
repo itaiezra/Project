@@ -51,43 +51,70 @@ namespace Chat
         {
 
             DBHandler db = new DBHandler();
-            keyWords(question);
-            int counter = 0,numOfKeyWords = keyWordsArray.Length, i=0,j=0;
-            while(counter < db.numOfRows())
+
+            if (keyWords(question) != "")
             {
-                while (i < numOfKeyWords)
+                int counter = 1, numOfKeyWords = keyWordsArray.Length, i = 0, j = 0, numOfRows = db.numOfRows();
+                while (counter < numOfRows)
                 {
-                    if (j == 5)
-                        return;
-                    if (keyWordsArray[i]==null)
-                        break;
-                    if (db.findQuestion(counter).Contains(keyWordsArray[i]))
+                    while (i < numOfKeyWords)
                     {
-                        returningAnswers[j] = counter;
-                        j++;
-                        i = 0;
-                        break;
+                        if (j == 5)
+                        {
+                            finalAnswer = db.findAnswer(returningAnswers);
+                            answare(finalAnswer);
+                            return;
+                        }
+                        if (keyWordsArray[i] == null)
+                        {
+                            i = 0;
+                            break;
+                        }
+                        string a = db.findQuestion(counter);
+                        string b = keyWordsArray[i];
+                        if (a.Contains(b))
+                        {
+                            returningAnswers[j] = counter;
+                            j++;
+                            i = 0;
+                            break;
+                        }
+
+                        i++;
+
                     }
 
-                    i++;
-                   
+                    counter++;
                 }
+                if (j != 0)
+                {
+                    finalAnswer = db.findAnswer(returningAnswers);
+                    answare(finalAnswer);
+                }
+                else
+                {
+                    answare("");
 
-                counter++;
+                }
             }
-
-            finalAnswer = db.findAnswer(returningAnswers);
-            answare(finalAnswer);
-
-
-            //answare(db.findQuestion(3));
-            //     answare(keyWords(question));
-            //    string[] a = Extractor();
-
+            else
+            {
+                answare("");
+            }
         }
         public void answare(string a)
         {
-            textBox1.Text += "\r\n" + a;
+            textBox1.Text += "your Key-Words are:";
+            textBox1.Text += System.Environment.NewLine;
+            textBox1.Text += System.Environment.NewLine;
+            textBox1.Text += keyWords(question);
+            textBox1.Text += System.Environment.NewLine;
+            textBox1.Text += System.Environment.NewLine;
+            if(a=="")
+                textBox1.Text += "We could not find an answe to your question in our DB.";
+            else
+                textBox1.Text += a;
+
         }
         public static string keyWords(string question)
         {
@@ -133,11 +160,14 @@ namespace Chat
             {
                 Console.WriteLine("   {0}", key.Word);
                 //-----------------------------------------------------------------------------------------------
-                keyWords += "  |  " + key.Word;
-                keyWordsArray[numOfKeywords] = key.Word;
-                numOfKeywords++;
-                if (numOfKeywords == 19)
-                    break;
+                if (!(key.Word == "use" || key.Word == "how"))
+                {
+                    keyWords += "  |  " + key.Word;
+                    keyWordsArray[numOfKeywords] = key.Word;
+                    numOfKeywords++;
+                    if (numOfKeywords == 19)
+                        break;
+                }
             }
             keyWordsArray[numOfKeywords] = "-0-";
 

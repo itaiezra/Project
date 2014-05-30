@@ -11,7 +11,8 @@ namespace Chat
 {
     class DBHandler
     {
-        public static string connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=E:\My Files\Documents\School\PROJECT\Chat\Chat\Database.mdf;Integrated Security=True";
+       // public static string connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=E:\My Files\Documents\School\PROJECT\Chat\Chat\Database.mdf;Integrated Security=True";
+        public static string connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=E:\Project\Chat\Chat\Database.mdf;Integrated Security=True";
         public static SqlConnectionStringBuilder abc = new SqlConnectionStringBuilder(connectionString);
       //  public static SqlConnection conn = new SqlConnection(abc.ToString());
 
@@ -89,13 +90,16 @@ namespace Chat
                     SqlCommand command = new SqlCommand("SELECT * FROM dbo.Table_Answer WHERE Id =" + a[i], conn);
                     conn.Open();
                     SqlDataReader read = command.ExecuteReader();
-                    if (!read.HasRows)
-                        answer = "no rows";
-                    else
+                    if (read.HasRows)
                         while (read.Read())
                         {
+                            answer += "Answer number: " + a[i];
+                            answer += System.Environment.NewLine;
                             answer += read.GetString(1);
-                            answer += "/r/n";
+                            answer += System.Environment.NewLine;
+                            answer += "****************************************************************************";
+                            answer += System.Environment.NewLine;
+
                         }
                     conn.Close();
                 }
