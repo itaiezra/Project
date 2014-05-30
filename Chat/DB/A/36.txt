@@ -1,0 +1,29 @@
+Answer;
+
+Program that assigns variable in while condition: C#
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+	int value = 4;
+	int i;
+	// You can assign a variable in the while-loop condition statement.
+	while ((i = value) >= 0)
+	{
+	    // In the while-loop body, both i and value are equal.
+	    Console.WriteLine("While {0} {1}", i, value);
+	    value--;
+	}
+    }
+}
+
+Output
+
+While 4 4
+While 3 3
+While 2 2
+While 1 1
+While 0 0

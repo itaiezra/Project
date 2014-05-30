@@ -1,0 +1,19 @@
+Answer;
+
+Do-while loop: C#
+
+static int SumDoWhile()
+{
+    //
+    // Sum numbers 0 .. 4
+    //
+    int sum = 0;
+    int i = 0;
+    do
+    {
+	sum += i;
+	i++;
+    } while (i < 5);
+    return sum;
+}
+

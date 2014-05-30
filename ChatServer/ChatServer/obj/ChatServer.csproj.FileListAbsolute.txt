@@ -1,0 +1,10 @@
+E:\PC_Projects\ChatServer\ChatServer\bin\Release\ChatServer.dll
+E:\PC_Projects\ChatServer\ChatServer\bin\Release\ChatServer.pdb
+E:\PC_Projects\ChatServer\ChatServer\obj\Release\ResolveAssemblyReference.cache
+E:\PC_Projects\ChatServer\ChatServer\obj\Release\ChatServer.dll
+E:\PC_Projects\ChatServer\ChatServer\obj\Release\ChatServer.pdb
+E:\PC_Projects\ChatServer\ChatServer\bin\Debug\ChatServer.dll
+E:\PC_Projects\ChatServer\ChatServer\bin\Debug\ChatServer.pdb
+E:\PC_Projects\ChatServer\ChatServer\obj\Debug\ResolveAssemblyReference.cache
+E:\PC_Projects\ChatServer\ChatServer\obj\Debug\ChatServer.dll
+E:\PC_Projects\ChatServer\ChatServer\obj\Debug\ChatServer.pdb

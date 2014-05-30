@@ -1,0 +1,35 @@
+Answer;
+
+Program that uses while-loop with condition: C#
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+	// Continue in while-loop until index is equal to ten.
+	int i = 0;
+	while (i < 10)
+	{
+	    Console.Write("While statement ");
+	    // Write the index to the screen.
+	    Console.WriteLine(i);
+	    // Increment the variable.
+	    i++;
+	}
+    }
+}
+
+Output
+
+While statement 0
+While statement 1
+While statement 2
+While statement 3
+While statement 4
+While statement 5
+While statement 6
+While statement 7
+While statement 8
+While statement 9

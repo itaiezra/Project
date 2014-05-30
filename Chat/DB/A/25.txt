@@ -1,0 +1,19 @@
+Answare:
+
+Program that uses LINQ on file: C#
+
+using System.IO;
+using System.Linq;
+
+class Program
+{
+    static void Main()
+    {
+	// See if line exists in a file.
+	// ... Uses a query expression to count matching lines.
+	// ... If one matches, exists is set to true.
+	bool exists = (from line in File.ReadAllLines("file.txt")
+		       where line == "Some line match"
+		       select line).Count() > 0;
+    }
+}

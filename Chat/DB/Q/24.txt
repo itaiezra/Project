@@ -1,0 +1,1 @@
+Question: How to count lines from a txt file?

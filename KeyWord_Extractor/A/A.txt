@@ -1,0 +1,649 @@
+
+
+{
+  "items": [
+    {
+      "tags": [
+        "javascript",
+        "slider",
+        "intervals"
+      ],
+      "owner": {
+        "reputation": 46,
+        "user_id": 1039478,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/bb62fa1af537213d72a8e400ea57dbc8?s=128&d=identicon&r=PG",
+        "display_name": "phgrey",
+        "link": "http://stackoverflow.com/users/1039478/phgrey"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1391352925,
+      "answer_id": 21511991,
+      "question_id": 21511811,
+      "body": "<p>Use setTimeout instead of setInterval - that will fire the function to run only once</p>\n"
+    },
+    {
+      "tags": [
+        "c#",
+        "git",
+        "visual-studio",
+        "workflow",
+        "versioning"
+      ],
+      "owner": {
+        "reputation": 366571,
+        "user_id": 6309,
+        "user_type": "registered",
+        "accept_rate": 86,
+        "profile_image": "https://www.gravatar.com/avatar/7aa22372b695ed2b26052c340f9097eb?s=128&d=identicon&r=PG",
+        "display_name": "VonC",
+        "link": "http://stackoverflow.com/users/6309/vonc"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1391352919,
+      "answer_id": 21511990,
+      "question_id": 21511959,
+      "body": "<p>Committing .sln and .csproj are usually the best practice (as in <a href=\"http://stackoverflow.com/a/3873854/6309\">this answer</a>), but merging requires some attention.<br>\nSee \"<a href=\"http://stackoverflow.com/a/13483596/6309\">Why are my <code>.csproj</code> files getting messed up after a <code>git rebase</code>?</a>\".</p>\n\n<pre><code>*.csproj -text merge=union\n*.sln -text merge=union\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "hadoop",
+        "mapreduce"
+      ],
+      "owner": {
+        "reputation": 21,
+        "user_id": 3220022,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/174c98e575be4e653ad8484315236067?s=128&d=identicon&r=PG&f=1",
+        "display_name": "Evgeny Benediktov",
+        "link": "http://stackoverflow.com/users/3220022/evgeny-benediktov"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1391352918,
+      "answer_id": 21511989,
+      "question_id": 21509272,
+      "body": "<p>There 3 steps of Reduce phase: copy (data to reducers), sort (more exactly - merge) and reduce (execution of Reduce()). </p>\n\n<p>Reducers can start coping data from a Mapper when the Mapper completes it's execution. By default, schedulers wait until 5% of the map tasks in a job have completed before\nscheduling reduce tasks for the same job. For large jobs this can cause problems with\ncluster utilization, since they take up reduce slots while waiting for the map tasks to\ncomplete. Setting mapred.reduce.slowstart.completed.maps to a higher value, such as\n0.80 (80%), can help improve throughput.</p>\n"
+    },
+    {
+      "tags": [
+        "java",
+        "hashmap"
+      ],
+      "owner": {
+        "reputation": 618,
+        "user_id": 3200809,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/2088837fbe02b0e4212c5e84b38dd560?s=128&d=identicon&r=PG&f=1",
+        "display_name": "java seeker",
+        "link": "http://stackoverflow.com/users/3200809/java-seeker"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1391352909,
+      "answer_id": 21511988,
+      "question_id": 21511882,
+      "body": "<p>This statement must be executed inside of any function or constructor. you can not insert, delete or update in global space.</p>\n\n<blockquote>\n  <p>h.put(\"PID\", new Integer[] {3, 5});</p>\n</blockquote>\n"
+    },
+    {
+      "tags": [
+        "java",
+        "random"
+      ],
+      "owner": {
+        "reputation": 37,
+        "user_id": 2537423,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/0fb2f830aaf286bfec7b1e31cd519ad8?s=128&d=identicon&r=PG",
+        "display_name": "A Parikh",
+        "link": "http://stackoverflow.com/users/2537423/a-parikh"
+      },
+      "is_accepted": false,
+      "score": 1,
+      "creation_date": 1391311786,
+      "answer_id": 21506686,
+      "question_id": 21506526,
+      "body": "<p>If you want 20 random integers between 1 and one hundred, use <code>Math.random()</code> to generate a value between 0 and 0.999... Then, manipulate this value to fit your range.</p>\n\n<pre><code>int[] random = new int[20];\nfor(int i =0; i&lt; random.length;i++)\n{\n   random[i] = (int)(Math.random()*100+1); \n}\n</code></pre>\n\n<p>When you multiply <code>Math.random()</code> by 100, you get a value between 0 and 99.999... To this number you add 1, yielding a value between 1.0 and 100.0. Then, I typecasted the number to an integer by using the  <code>(int)</code> typecast. This gives a number between 1 and 100 inclusive. Then, store the values into an array.</p>\n"
+    },
+    {
+      "tags": [
+        "postgresql",
+        "intervals",
+        "check-constraints"
+      ],
+      "owner": {
+        "reputation": 10905,
+        "user_id": 238814,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/4f93d624a8c2c7792b56547b662435de?s=128&d=identicon&r=PG",
+        "display_name": "Daniel V&#233;rit&#233;",
+        "link": "http://stackoverflow.com/users/238814/daniel-verite"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1391352908,
+      "answer_id": 21511987,
+      "question_id": 21499643,
+      "body": "<p>Technically, the syntax error in the check constraint is about this part:</p>\n\n<pre><code>EPOCH FROM INTERVAL COOLINGOFF_PERIOD\n</code></pre>\n\n<p>which is not accepted because in this context <code>INTERVAL</code> is meant to be followed by a literal, as in <code>INTERVAL '10 days'</code></p>\n\n<p>Anyway as suggested in the comments, the translation from <code>EPOCH</code> is not even needed, it's easier to write:</p>\n\n<pre><code>CREATE TABLE ... (\n ...\n COOLINGOFF_PERIOD       INTERVAL(3)     NOT NULL\n    CHECK (COOLINGOFF_PERIOD between '0'::interval and '10 years'::interval)\n ...\n);\n</code></pre>\n\n<p>See <a href=\"http://www.postgresql.org/docs/current/static/datatype-datetime.html#DATATYPE-INTERVAL-INPUT\" rel=\"nofollow\">Interval Input</a> in the doc for all the details and syntax variants.</p>\n"
+    },
+    {
+      "tags": [
+        "python",
+        "regex"
+      ],
+      "owner": {
+        "reputation": 1677,
+        "user_id": 2062973,
+        "user_type": "registered",
+        "accept_rate": 91,
+        "profile_image": "http://i.stack.imgur.com/Xjb1s.gif?s=128&g=1",
+        "display_name": "yopy",
+        "link": "http://stackoverflow.com/users/2062973/yopy"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1391352899,
+      "answer_id": 21511985,
+      "question_id": 21511831,
+      "body": "<p>If i do that i ll just use coma separated user input inside Try and Except: <code>Easier to ask forgiveness than permission</code></p>\n\n<pre><code>&gt;&gt;&gt; def check_range(tup):\n...     try:\n...         return range(tup[0], tup[1])\n...     except:\n...         print \"Invalid Range\"\n...         return None\n...\n&gt;&gt;&gt; check_range((1,2))\n[1]\n&gt;&gt;&gt; check_range((3,2))\n[]\n&gt;&gt;&gt; check_range((3,'a'))\nInvalid Range\n&gt;&gt;&gt; check_range((3))\nInvalid Range\n&gt;&gt;&gt;\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "javascript"
+      ],
+      "owner": {
+        "reputation": 154411,
+        "user_id": 182668,
+        "user_type": "registered",
+        "accept_rate": 76,
+        "profile_image": "https://www.gravatar.com/avatar/b19917aa04a6839aef577f1117c71d48?s=128&d=identicon&r=PG",
+        "display_name": "Pointy",
+        "link": "http://stackoverflow.com/users/182668/pointy"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1391352893,
+      "answer_id": 21511984,
+      "question_id": 21511975,
+      "body": "<p>When you set up the event handler, you need to pass only the <strong>name</strong> of the function:</p>\n\n<pre><code>$(window).resize(resizeWebSite);\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "c",
+        "exc-bad-access"
+      ],
+      "owner": {
+        "reputation": 268185,
+        "user_id": 15168,
+        "user_type": "registered",
+        "accept_rate": 100,
+        "profile_image": "https://www.gravatar.com/avatar/7d0d66b076e3bc70819e50f8a25af8df?s=128&d=identicon&r=PG",
+        "display_name": "Jonathan Leffler",
+        "link": "http://stackoverflow.com/users/15168/jonathan-leffler"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1391352509,
+      "answer_id": 21511927,
+      "question_id": 21511661,
+      "body": "<p>The default stack size on Mac OS X is 8 MiB (8,192 KiB) — try <code>ulimit -s</code> or <code>ulimit -a</code> in a terminal.</p>\n\n<p>You have an array of doubles running at about 2.5 MiB (200 x 200 x 2 x 1 x 2 x 2 x sizeof(double)).  You have 3 other arrays of <code>double</code> that are half that size; you have 2 arrays of <code>int</code> that are 1/4 the size. These add up to 7.560 MB (7.4 MiB).  Even G, H and I are using a moderate amount of stack space: in aggregate, they're as big as D, so they use about 1 MiB.</p>\n\n<p>The sum of these sizes is too big for the stack. You can make them file scope arrays, or you can dynamically allocate them with <code>malloc()</code> et al.</p>\n\n<p>Why on earth would you have a dimension of <code>[1]</code>?  You can only ever write 0 as a valid subscript, but then why bother?</p>\n"
+    },
+    {
+      "tags": [
+        "javascript",
+        "jquery",
+        "ajax"
+      ],
+      "owner": {
+        "reputation": 2065,
+        "user_id": 1592398,
+        "user_type": "registered",
+        "accept_rate": 89,
+        "profile_image": "http://i.stack.imgur.com/pCfm8.jpg?s=128&g=1",
+        "display_name": "code-jaff",
+        "link": "http://stackoverflow.com/users/1592398/code-jaff"
+      },
+      "is_accepted": false,
+      "score": 1,
+      "creation_date": 1391183277,
+      "answer_id": 21484138,
+      "question_id": 21482836,
+      "body": "<p>Here is a simple solution, will get you to the actual solution for your issue</p>\n\n<p><strong>HTML</strong></p>\n\n<pre><code>&lt;div class=\"btn-group\" data-toggle=\"buttons\"&gt;\n  &lt;label class=\"btn btn-primary\"&gt;\n    &lt;input type=\"radio\" name=\"options\" id=\"option1\" data-val = \"110\"&gt; 110\n  &lt;/label&gt;\n  &lt;label class=\"btn btn-primary\"&gt;\n    &lt;input type=\"radio\" name=\"options\" id=\"option2\" data-val = \"120\"&gt; 120\n  &lt;/label&gt;\n  &lt;label class=\"btn btn-primary\"&gt;\n    &lt;input type=\"radio\" name=\"options\" id=\"option3\" data-val = \"130\"&gt; 130\n  &lt;/label&gt;\n&lt;/div&gt;\n</code></pre>\n\n<p><strong>JavaScript</strong></p>\n\n<pre><code>$('.btn input[type=\"radio\"]').on('change', function(e){\n    alert($(this).data('val'));\n    console.log($(this).data('val'));\n});\n</code></pre>\n\n<p><a href=\"http://jsfiddle.net/jnXHu/\" rel=\"nofollow\"><strong>demo</strong></a></p>\n\n<p>As per the question update, you need to set the data on upload start - I've just gone through the <a href=\"https://github.com/blueimp/jQuery-File-Upload/wiki/How-to-submit-additional-form-data#wiki-setting-formdata-on-upload-start\" rel=\"nofollow\">documentation</a></p>\n\n<pre><code>$('#upload').on('fileuploadsubmit', function (e, data) {\n    data.formData: { \n            upload_type: 'local', \n            thumbnail_width: $('.btn.active input[type=\"radio\"]').data('val'),\n            resize_width: $('.options .resize_width').val(),\n    }    \n});\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "c++",
+        "global-variables",
+        "registration",
+        "void",
+        "comma-operator"
+      ],
+      "owner": {
+        "reputation": 8612,
+        "user_id": 2877241,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/63d17ecdadc8917254be4fb70e86246b?s=128&d=identicon&r=PG&f=1",
+        "display_name": "Vlad from Moscow",
+        "link": "http://stackoverflow.com/users/2877241/vlad-from-moscow"
+      },
+      "is_accepted": false,
+      "score": 1,
+      "creation_date": 1391352517,
+      "answer_id": 21511929,
+      "question_id": 21511847,
+      "body": "<p>The aithor of the code wanted to have a bool flag that will say whether the service already registered. He could write for example</p>\n\n<pre><code>libecap::RegisterService(new Adapter::Service);\nstatic const bool Registered =  true;\n</code></pre>\n\n<p>provided that Registered is a local variable. </p>\n\n<p>But if Registered is not a local variable then he may not call a function outside some other function (or main). So the only method to define a global bool variable (with external or internal linkage) and at the same time to call a function that has return type void is the following</p>\n\n<pre><code>static const bool Registered = (libecap::RegisterService(new Adapter::Service), true);\n</code></pre>\n\n<p>The result of the expression of the comma operator is true an Registered will be initialized by this value. Amd at the same time function libecap::RegisterService(new Adapter::Service) will be called.</p>\n"
+    },
+    {
+      "tags": [
+        "jquery"
+      ],
+      "owner": {
+        "reputation": 10534,
+        "user_id": 975520,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/703e1d2e5c8ae1672de6909d5f8464e7?s=128&d=identicon&r=PG",
+        "display_name": "Irvin Dominin aka Edward",
+        "link": "http://stackoverflow.com/users/975520/irvin-dominin-aka-edward"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1391279237,
+      "answer_id": 21501832,
+      "question_id": 21499096,
+      "body": "<p>You can use <a href=\"http://api.jquery.com/slice/\" rel=\"nofollow\"><code>slice</code></a>:</p>\n\n<blockquote>\n  <p>Description: Reduce the set of matched elements to a subset specified\n  by a range of indices.</p>\n</blockquote>\n\n<p>to define the elements to display in the current page.</p>\n\n<p>Code:</p>\n\n<pre><code>var firstRecord = 0;\nvar pageSize = 4;\nvar tableRows = $(\"#movie tbody tr\");\n\n$(\"a.paginate\").click(function (e) {\n    e.preventDefault();\n    var tmpRec = firstRecord;\n    if ($(this).attr(\"id\") == \"next\") {\n        tmpRec += pageSize;\n    } else {\n        tmpRec -= pageSize;\n    }\n    if (tmpRec &lt; 0 || tmpRec &gt; tableRows.length) return\n    firstRecord = tmpRec;\n    paginate(firstRecord, pageSize);\n});\n\nvar paginate = function (start, size) {\n    var end = start + size;\n    tableRows.hide();\n    tableRows.slice(start, end).show();\n}\n\n\npaginate(firstRecord, pageSize);\n</code></pre>\n\n<p>Demo: <a href=\"http://jsfiddle.net/H9JBT/\" rel=\"nofollow\">http://jsfiddle.net/H9JBT/</a></p>\n\n<h2>UPDATE</h2>\n\n<p>For hide/show next/prev button you can check if the first/last element in visible using <a href=\"http://api.jquery.com/visible-selector/\" rel=\"nofollow\"><code>:visible</code></a> and <a href=\"http://api.jquery.com/is/\" rel=\"nofollow\"><code>is</code></a>.</p>\n\n<p>Code:</p>\n\n<pre><code>var paginate = function (start, size) {\n    var end = start + size;\n    tableRows.hide();\n    tableRows.slice(start, end).show();\n        $(\".paginate\").show();\n    if (tableRows.eq(0).is(\":visible\")) $('#previous').hide();\n        if (tableRows.eq(tableRows.length-1).is(\":visible\")) $('#next').hide();\n}\n</code></pre>\n\n<p>Demo: <a href=\"http://jsfiddle.net/H9JBT/1/\" rel=\"nofollow\">http://jsfiddle.net/H9JBT/1/</a></p>\n"
+    },
+    {
+      "tags": [
+        "java",
+        "android"
+      ],
+      "owner": {
+        "reputation": 4415,
+        "user_id": 1423227,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/7fede69e001be38e011c456aad799663?s=128&d=identicon&r=PG",
+        "display_name": "vipul mittal",
+        "link": "http://stackoverflow.com/users/1423227/vipul-mittal"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1391352846,
+      "answer_id": 21511982,
+      "question_id": 21511850,
+      "body": "<p>try this:</p>\n\n<pre><code>    int i = 0;\n\npublic void changeString() {\n    started = true;\n    word = \"\";\n\n    int j = rand.nextInt((max - min) + 1) + min;\n    word += tr.Translate(j);\n\n    txt.setText(word);\n    new Handler().postDelayed(new Runnable() {\n\n        @Override\n        public void run() {\n            if (i &lt; lenght + 1) {\n                changeString();\n                i++;\n            }\n        }\n    }, 1000);\n}\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "javascript",
+        "html",
+        "iframe",
+        "resize"
+      ],
+      "owner": {
+        "reputation": 51,
+        "user_id": 2087070,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/840a8c66250bcd16fb3f8f406ba9a0fc?s=128&d=identicon&r=PG",
+        "display_name": "David Bradshaw",
+        "link": "http://stackoverflow.com/users/2087070/david-bradshaw"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1390905726,
+      "answer_id": 21403361,
+      "question_id": 18856783,
+      "body": "<p>Having looked a lots of different solutions to this I ended up writing a simple jQuery plugin to take a account of a number of different use cases. As I needed a solution that supported multiple user generated iFrames on a portal page, supported browser resizes and could cope with the host page JavaScript loading after the iFrame. I also added support for sizing to width and a callback function and allow the override of the body.margin, as you will likely want to have this set to zero.</p>\n\n<p><a href=\"https://github.com/davidjbradshaw/iframe-resizer\" rel=\"nofollow\">https://github.com/davidjbradshaw/iframe-resizer</a></p>\n\n<p>The host page users jQuery, the iframe code is just a little self-contained JavaScript, so that it's a good guest on other people pages.</p>\n\n<p>The jQuery is then initialised on the host page and has the following available options. More details on what these do on the GitHub page.</p>\n\n<pre><code>$('iframe').iFrameSizer({\n    log: false,\n    contentWindowBodyMargin:8,\n    doHeight:true,\n    doWidth:false,\n    enablePublicMethods:false,\n    interval:33,\n    autoResize: true,\n    callback:function(messageData){\n        $('p#callback').html('&lt;b&gt;Frame ID:&lt;/b&gt; ' + messageData.iframe.id + \n                            ' &lt;b&gt;Height:&lt;/b&gt; ' + messageData.height + \n                            ' &lt;b&gt;Width:&lt;/b&gt; ' + messageData.width +\n                            ' &lt;b&gt;Event type:&lt;/b&gt; ' + messageData.type);\n    }\n});\n</code></pre>\n\n<p>If you set enablePublicMethods, it gives you access in the iframe to manually set the iFrame size and even remove the iframe from the host page.</p>\n"
+    },
+    {
+      "tags": [
+        "javascript",
+        "html",
+        "css",
+        "xmlhttprequest",
+        "stylesheet"
+      ],
+      "owner": {
+        "reputation": 876,
+        "user_id": 1518921,
+        "user_type": "registered",
+        "accept_rate": 77,
+        "profile_image": "https://www.gravatar.com/avatar/9fa66d9cd7132256609e73eef6933ac7?s=128&d=identicon&r=PG&f=1",
+        "display_name": "Guilherme Nascimento",
+        "link": "http://stackoverflow.com/users/1518921/guilherme-nascimento"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1391349283,
+      "answer_id": 21511384,
+      "question_id": 21511302,
+      "body": "<p>if you use <code>&lt;link&gt;</code>, the file path is done with 2 Levels:</p>\n\n<ul>\n<li>1 level: place where is your \"html\".</li>\n<li>2 level: place where is your \"css\" files.</li>\n</ul>\n\n<p>If you enter \"css\" via \"javascript\", the path will have only 1 level, in other words, with javascript css would be equal to the same folder as your \"html\".</p>\n\n<p>So the solution is you use the \"absolute path\" for images called by CSS, example:</p>\n\n<p><code>background-image(http://website.com/css/img/avatar.png);</code></p>\n\n<p>or </p>\n\n<p><code>background-image(http://website.com/html/css/img/avatar.png);</code></p>\n\n<p>Another possible solution is to use <code>String.replace</code> in Javascript, see:</p>\n\n<pre><code>function RelativeToAbsolute(a){\n    var b = String(window.location).replace(/\\/[^\\/]+$/, \"\").replace(/\\/$/, \"\")+\"\\/\";\n    if(a){\n        a = String(a).replace(/url\\([.]\\//gi, \"url({PATH}\").replace(/url\\(\\{PATH\\}([^)]+[)])/gi, \"url(\"+b+\"$1\");\n        myLOG(a);\n        return a;\n    } else {\n        myLOG(\"CSS invalid\");\n    }\n    return a;\n}\n...\n//With your CSS\noNew.textContent = RelativeToAbsolute(xhr.responseText);\n</code></pre>\n\n<p>Testing the code:</p>\n\n<pre><code>RelativeToAbsolute(\".seletor {\\n\"+\n\"   background-image: url(css/img/img1.png);\\n\"+\n\"}\\n\"+\n\".seletor2 {\\n\"+\n\"   background-image: url(./css/img/img1.png);\\n\"+\n\"}\\n\"+\n\".seletor3 {\\n\"+\n\"   background-image: url(css/img/img2.png);\\n\"+\n\"}\\n\"+\n\".seletor4 {\\n\"+\n\"   background-image: url(./css/img/img2.png);\\n\"+\n\"}\\n\"+\n\".seletor5 {\\n\"+\n\"   background: url(http://localhost/html/css/img/img2.png);\\n\"+\n\"}\");\n</code></pre>\n\n<p>Output:</p>\n\n<pre><code>.seletor {\n    background-image: url(css/img/img1.png);\n}\n.seletor2 {\n    background-image: url(http://localhost/html/css/img/img1.png);\n}\n.seletor3 {\n    background-image: url(css/img/img2.png);\n}\n.seletor4 {\n    background-image: url(http://localhost/html/css/img/img2.png);\n}\n.seletor5 {\n    background: url(http://localhost/html/css/img/img2.png);\n}\n</code></pre>\n\n<hr>\n\n<p><strong>Tip:</strong></p>\n\n<p>Something good for your server would use images with CDN (eg. sub-domains with \"image.\" prefix), example:</p>\n\n<p><code>background-image(http://images.website.com/css/img/avatar.png);</code></p>\n\n<p>or </p>\n\n<p><code>background-image(http://images.website.com/html/css/img/avatar.png);</code></p>\n"
+    },
+    {
+      "tags": [
+        "c#",
+        "visual-studio-2012",
+        "charts"
+      ],
+      "owner": {
+        "reputation": 1,
+        "user_id": 3254277,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/84f82bc23835fb303c52ef11fc9b7c23?s=128&d=identicon&r=PG&f=1",
+        "display_name": "Anidor",
+        "link": "http://stackoverflow.com/users/3254277/anidor"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1391348881,
+      "answer_id": 21511318,
+      "question_id": 17722532,
+      "body": "<p>Had the same performance issue with a mousewheel event. </p>\n\n<p>Here is my solution:</p>\n\n<ol>\n<li><p>To get the axes values of the current mouse position:</p>\n\n<pre><code>double posX = Math.Round(currentArea.AxisX.PixelPositionToValue(e.X));\ndouble posY = Math.Round(currentArea.AxisY.PixelPositionToValue(e.Y));\n</code></pre>\n\n<p>Taken from <a href=\"http://stackoverflow.com/a/10460481\">Showing Mouse Axis Coordinates on Chart Control</a> with a little change to get it more accurate.</p>\n\n<p>But you should check before, that the mouse is in a <strong>ChartArea</strong>, else it will throw you an <strong>Exception</strong>.</p></li>\n<li><p>To get the ChatElement on which the mouse points:</p>\n\n<pre><code>// Gets the ChartArea that the mouse points\nprivate ChartArea mouseinChartArea(Chart source, Point e)\n{\n    double relativeX = (double)e.X * 100 / source.Width;\n    double relativeY = (double)e.Y * 100 / source.Height;\n\n    foreach (ChartArea ca in source.ChartAreas)\n    {\n        if (relativeX &gt; ca.Position.X &amp;&amp; relativeX &lt; ca.Position.Right &amp;&amp;\n            relativeY &gt; ca.Position.Y &amp;&amp; relativeY &lt; ca.Position.Bottom)\n            return ca;\n    }\n    return null;\n}\n\n// for my purpose, returns an axis. But you can return anything\nprivate Axis findAxisforZooming(Chart source, Point e)\n{\n    ChartArea currentArea = mouseinChartArea(source, new Point(e.X, e.Y)); // Check if inside \n    if (currentArea == null)\n        return null;\n\n    double axisXfontSize = currentArea.AxisX.LabelAutoFitMinFontSize + ((double)source.Width / SystemInformation.PrimaryMonitorSize.Width)\n        * (currentArea.AxisX.LabelAutoFitMaxFontSize - currentArea.AxisX.LabelAutoFitMinFontSize);\n    double axisYfontSize = currentArea.AxisY.LabelAutoFitMinFontSize + ((double)source.Height / SystemInformation.PrimaryMonitorSize.Height)\n        * (currentArea.AxisY.LabelAutoFitMaxFontSize - currentArea.AxisY.LabelAutoFitMinFontSize);\n    double axisYfontHeightSize = (axisYfontSize - currentArea.AxisY.LabelStyle.Font.Size) + currentArea.AxisY.LabelStyle.Font.Height;\n\n    Graphics g = this.CreateGraphics();\n    if (currentArea.AxisX.LabelStyle.Font.Unit == GraphicsUnit.Point)\n        axisXfontSize = axisXfontSize * g.DpiX / 72;\n    if (currentArea.AxisY.LabelStyle.Font.Unit == GraphicsUnit.Point)\n        axisYfontHeightSize = axisYfontHeightSize * g.DpiX / 72;\n    g.Dispose();\n\n    // Replacing the SystemInformation.PrimaryMonitorSize with the source.Width / Height will give the accurate TickMarks size.\n    // But it doens't count for the gab between the tickMarks and the axis lables (so by replacing, it give a good proximity with the gab)\n    int axisYTickMarks = (int)Math.Round(currentArea.AxisY.MajorTickMark.Size / 100 * SystemInformation.PrimaryMonitorSize.Width); // source.Width;\n    int axisXTickMarks = (int)Math.Round(currentArea.AxisX.MajorTickMark.Size / 100 * SystemInformation.PrimaryMonitorSize.Height); // source.Height;\n\n    int leftInnerPlot = (int)Math.Round(currentArea.Position.X / 100 * source.Width +\n        currentArea.InnerPlotPosition.X / 100 * currentArea.Position.Width / 100 * source.Width);\n    int rightInnerPlot = (int)Math.Round(currentArea.Position.X / 100 * this.chart1.Width +\n        currentArea.InnerPlotPosition.Right / 100 * currentArea.Position.Width / 100 * source.Width);\n    int topInnerPlot = (int)Math.Round(currentArea.Position.Y / 100 * this.chart1.Height +\n        currentArea.InnerPlotPosition.Y / 100 * currentArea.Position.Height / 100 * source.Height);\n    int bottomInnerPlot = (int)Math.Round(currentArea.Position.Y / 100 * source.Height +\n        currentArea.InnerPlotPosition.Bottom / 100 * currentArea.Position.Height / 100 * source.Height);\n\n    // Now you got the boundaries of every important ChartElement.\n    // Only left to check if the mouse is within your desire ChartElement,\n    // like the following:    \n\n    bottomInnerPlot += axisXTickMarks + (int)Math.Round(axisXfontSize); // Include AxisX\n\n    if (e.X &gt; leftInnerPlot &amp;&amp; e.X &lt; rightInnerPlot &amp;&amp;\n        e.Y &gt; topInnerPlot &amp;&amp; e.Y &lt; bottomInnerPlot) // return AxisX if inside the InnerPlot area or on AxisX\n        return currentArea.AxisX;\n    else if (e.X &gt; (leftInnerPlot - axisYTickMarks - (int)Math.Round(axisYfontHeightSize)) &amp;&amp; e.X &lt; rightInnerPlot &amp;&amp;\n             e.Y &gt; topInnerPlot &amp;&amp; e.Y &lt; bottomInnerPlot) // return AxisY if on AxisY only\n        return currentArea.AxisY;\n\n    return null;\n}\n</code></pre></li>\n</ol>\n\n<p>As it can be seen, the code is longer than <code>HitTest()</code>. But the run time is <strong>shorter</strong>.</p>\n"
+    },
+    {
+      "tags": [
+        "c#",
+        "wpf",
+        "windows-phone-8",
+        "caliburn.micro"
+      ],
+      "owner": {
+        "reputation": 2397,
+        "user_id": 991762,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/0427cc380ee354ba126c1f0cb89d719e?s=128&d=identicon&r=PG",
+        "display_name": "Chris",
+        "link": "http://stackoverflow.com/users/991762/chris"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1391352815,
+      "answer_id": 21511976,
+      "question_id": 21440019,
+      "body": "<p>I couldn't replicate the error from the example above, is there additional information in your <code>ViewModel</code>?</p>\n\n<p>you should also be able to get the effect you want (although I'd still be interested to see the root cause of your error), by using the <code>Caliburn.Micro</code> conventions. Is <code>x:Name=sp</code> causing anything to be bound?</p>\n\n<p>If you have a method <code>SayHello</code>, with a <code>UI</code> element bound to the method via a convention: <code>x:Name=\"SayHello\"</code></p>\n\n<p>You can create a bool property on your <code>ViewModel</code> called <code>CanSayHello</code>, which <code>Caliburn.Micro</code> will use to Enable/Disable the control; although you will have to call <code>NotifyPropertyChanged</code> when that property changes (so the <code>UI</code> is aware and can update the control).</p>\n\n<p>E.g.</p>\n\n<pre><code>&lt;!-- Your existing Control, Note `IsEnabled` is not bound --&gt;\n&lt;ToggleButton x:Name=\"SayHello\" Height=\"40\"&gt;\n\n// On your ViewModel\npublic bool CanSayHello\n{\n    get\n    {\n        return HasValue;\n    }\n}\n\npublic void Click()\n{\n    HasValue = !HasValue;\n    NotifyOfPropertyChange(() =&gt; CanSayHello);\n}\n</code></pre>\n\n<p><a href=\"http://caliburnmicro.codeplex.com/wikipage?title=All%20About%20Actions\" rel=\"nofollow\">Some additional info.</a></p>\n"
+    },
+    {
+      "tags": [
+        "python",
+        "django"
+      ],
+      "owner": {
+        "reputation": 15710,
+        "user_id": 643827,
+        "user_type": "registered",
+        "accept_rate": 100,
+        "profile_image": "https://www.gravatar.com/avatar/aaccfdb6c85193cd3b6cde7698d0e938?s=128&d=identicon&r=PG",
+        "display_name": "lanzz",
+        "link": "http://stackoverflow.com/users/643827/lanzz"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1391352806,
+      "answer_id": 21511972,
+      "question_id": 21511570,
+      "body": "<p>Apparently you have neither <code>pysqlite2</code> nor <code>sqlite3</code> installed, but you've configured Django to use a SQLite database; one of those database drivers is required in order to use a SQLite database.</p>\n\n<p>Also, you have apparently only installed Django in your Python 3 environment. Package library directories are not shared between different versions of Python — each has its own, so packages you want to use with multiple versions of Python need to be installed separately for each version.</p>\n"
+    },
+    {
+      "tags": [
+        "cross-domain",
+        "postmessage"
+      ],
+      "owner": {
+        "reputation": 51,
+        "user_id": 2087070,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/840a8c66250bcd16fb3f8f406ba9a0fc?s=128&d=identicon&r=PG",
+        "display_name": "David Bradshaw",
+        "link": "http://stackoverflow.com/users/2087070/david-bradshaw"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1391352805,
+      "answer_id": 21511971,
+      "question_id": 7532315,
+      "body": "<p>Having looked a lots of different solutions to this I ended up writing a simple jQuery plugin to take a account of a number of different use cases. As I needed a solution that supported multiple user generated iFrames on a portal page, supported browser resizes and could cope with the host page JavaScript loading after the iFrame. I also added support for sizing to width and a callback function and allow the override of the body.margin, as you will likely want to have this set to zero.</p>\n\n<p><a href=\"https://github.com/davidjbradshaw/iframe-resizer\" rel=\"nofollow\">https://github.com/davidjbradshaw/iframe-resizer</a></p>\n\n<p>The host page users jQuery, the iframe code is just a little self-contained JavaScript, so that it's a good guest on other people pages.</p>\n\n<p>The jQuery is then initialised on the host page and has the following available options. More details on what these do on the GitHub page.</p>\n\n<pre><code>$('iframe').iFrameSizer({\n    log: false,\n    contentWindowBodyMargin:8,\n    doHeight:true,\n    doWidth:false,\n    enablePublicMethods:false,\n    interval:33,\n    autoResize: true,\n    callback:function(messageData){\n        $('p#callback').html('&lt;b&gt;Frame ID:&lt;/b&gt; ' + messageData.iframe.id + \n                            ' &lt;b&gt;Height:&lt;/b&gt; ' + messageData.height + \n                            ' &lt;b&gt;Width:&lt;/b&gt; ' + messageData.width +\n                            ' &lt;b&gt;Event type:&lt;/b&gt; ' + messageData.type);\n    }\n});\n</code></pre>\n\n<p>If you set enablePublicMethods, it gives you access in the iframe to manually set the iFrame size and even remove the iframe from the host page.</p>\n"
+    },
+    {
+      "tags": [
+        "python",
+        "regex"
+      ],
+      "owner": {
+        "reputation": 48932,
+        "user_id": 216074,
+        "user_type": "registered",
+        "accept_rate": 91,
+        "profile_image": "https://www.gravatar.com/avatar/609c93bafd659500f83fde04802a9be5?s=128&d=identicon&r=PG",
+        "display_name": "poke",
+        "link": "http://stackoverflow.com/users/216074/poke"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1391352795,
+      "answer_id": 21511970,
+      "question_id": 21511831,
+      "body": "<p>You can just get rid of some of those capturing groups to simply it:</p>\n\n<pre><code>^(?P&lt;begin&gt;\\d+)-(?P&lt;end&gt;\\d+)$\n</code></pre>\n\n<p>This also fixes the problem that the <code>-</code> could be there without a second number and that theoretically (not practically) begin and end could be separated by nothing.</p>\n\n<p>If you don’t always want to match a range but also want to allow a single number, you can put the range part in a non-capturing group. That way you don’t end up with additional groups:</p>\n\n<pre><code>^(?P&lt;begin&gt;\\d+)(?:-(?P&lt;end&gt;\\d+))?$\n</code></pre>\n\n<p>And finally, if you want to accept <code>to</code> as a separator as well, you can even do that:</p>\n\n<pre><code>^(?P&lt;begin&gt;\\d+)(?:(?:-|\\s+to\\s+)(?P&lt;end&gt;\\d+))?$\n</code></pre>\n\n\n\n<pre><code>&gt;&gt;&gt; r = re.compile('^(?P&lt;begin&gt;\\d+)(?:-(?P&lt;end&gt;\\d+))?$')\n&gt;&gt;&gt; r.match('123').groupdict()\n{'begin': '123', 'end': None}\n&gt;&gt;&gt; r.match('123-456').groupdict()\n{'begin': '123', 'end': '456'}\n\n&gt;&gt;&gt; r = re.compile('^(?P&lt;begin&gt;\\d+)(?:(?:-|\\s+to\\s+)(?P&lt;end&gt;\\d+))?$')\n&gt;&gt;&gt; r.match('123-456').groupdict()\n{'begin': '123', 'end': '456'}\n&gt;&gt;&gt; r.match('123 to 456').groupdict()\n{'begin': '123', 'end': '456'}\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "java",
+        "arrays",
+        "list",
+        "trim"
+      ],
+      "owner": {
+        "reputation": 228459,
+        "user_id": 139985,
+        "user_type": "registered",
+        "accept_rate": 62,
+        "profile_image": "https://www.gravatar.com/avatar/147c5a9cc1feec049c50da791ac7d144?s=128&d=identicon&r=PG",
+        "display_name": "Stephen C",
+        "link": "http://stackoverflow.com/users/139985/stephen-c"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1391352341,
+      "answer_id": 21511891,
+      "question_id": 21511414,
+      "body": "<p>Hints to help you learn:</p>\n\n<blockquote>\n  <p>Firstly, I want to remove the , and the whitespace from the start of the rows and have the text starting with FR. </p>\n</blockquote>\n\n<p>Read about the <code>trim</code> and <code>substring</code> methods of <a href=\"http://docs.oracle.com/javase/7/docs/api/java/lang/String.html\" rel=\"nofollow\"><code>String</code></a>.  In fact, I recommend reading that entire page ... and also the pages for <a href=\"http://docs.oracle.com/javase/7/docs/api/java/util/List.html\" rel=\"nofollow\"><code>List</code></a> and <a href=\"http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html\" rel=\"nofollow\"><code>Collection</code></a> ...</p>\n\n<p>Bear in mind that all String objects are immutable, so <code>trim</code> and so on all work by creating <em>new</em> strings.</p>\n\n<p>(Also see below!)  </p>\n\n<blockquote>\n  <p>I've tried <code>dataList.remove(0)</code> but it doesn't work.</p>\n</blockquote>\n\n<p>That method removes an entry from a list.</p>\n\n<blockquote>\n  <p>Oddly enough, in the console display, all the rows are separated with a new line before each \",\" but it isn't showing up here.  </p>\n</blockquote>\n\n<p>Actually it is / they are.  Those are is what is causing the line breaks before each comma in your output ... and the commas themselves!  When you call this:</p>\n\n<pre><code>    System.out.println(this.dataList);\n</code></pre>\n\n<p>the list is being formatted by the list object's <code>toString()</code> method.  This is what is adding the square brackets and the mysterious <code>\", \"</code> stuff.  </p>\n\n<p>Before you start writing code to edit those mysterious characters out of the strings, check that they are <em>really</em> there ... and not just an artefact of the way you printed the list. </p>\n\n<blockquote>\n  <p>I'm looking to select a particular row by keyword like Stanstead, and add text into the middle of it like \"Arrival Time:\" etc, but I'm having trouble here.</p>\n</blockquote>\n\n<p>Iterate over the list, and call <code>contains</code> on each String.  The javadoc is at the place linked above ... </p>\n"
+    },
+    {
+      "tags": [
+        "javascript",
+        "jquery",
+        "events"
+      ],
+      "owner": {
+        "reputation": 663,
+        "user_id": 2026065,
+        "user_type": "registered",
+        "accept_rate": 86,
+        "profile_image": "http://i.stack.imgur.com/tszOW.png?s=128&g=1",
+        "display_name": "Abdul Jabbar WebBestow",
+        "link": "http://stackoverflow.com/users/2026065/abdul-jabbar-webbestow"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1391352763,
+      "answer_id": 21511967,
+      "question_id": 18595298,
+      "body": "<p>This is a common Bug in Javascript. you can find many articles around internet specially on SO for event being fired twice. You can try something like this </p>\n\n<pre><code> $(document).on('click', '#jqxSlider', function(e)\n {\n       alert('Hellow world');\n       e.stopPropagation();\n       return false;\n });\n</code></pre>\n\n<p>And it's definitely Javascript problem because if you hit google and search for <strong>event fire twice</strong> you will see that Angular, Jquery and backbone etc all are somewhere firing events twice or even thrice. So, it's seems that it's javascript behind this. And off course if you search this with Mozilla Developers Network then you can see experts have also said so.</p>\n"
+    },
+    {
+      "tags": [
+        "r",
+        "data.table"
+      ],
+      "owner": {
+        "reputation": 883,
+        "user_id": 1105773,
+        "user_type": "registered",
+        "accept_rate": 100,
+        "profile_image": "https://www.gravatar.com/avatar/58c13a8de138ec322967686e3ee9af1b?s=128&d=identicon&r=PG&f=1",
+        "display_name": "Matt Weller",
+        "link": "http://stackoverflow.com/users/1105773/matt-weller"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1391352740,
+      "answer_id": 21511965,
+      "question_id": 21511635,
+      "body": "<p>I used <code>melt</code> in the package <code>reshape2</code> to convert the data into a \"long\" format whilst filtering for <code>TRUE</code> and then concatenated by ID in the final step.</p>\n\n<pre><code>DT &lt;- data.table(ID = c(1:2), V1 = c(TRUE,FALSE), V2 = c(FALSE, TRUE), V3 = c(FALSE, TRUE))\n\nlibrary(reshape2)\nDT2 = data.table(melt(DT, id.vars=\"ID\"))[value ==TRUE]\n</code></pre>\n\n<p>This gives the data in the following format:</p>\n\n<pre><code>   ID variable value\n1:  1       V1  TRUE\n2:  2       V2  TRUE\n3:  2       V3  TRUE\n</code></pre>\n\n<p>Then concatenate the variables by ID.</p>\n\n<pre><code>DT2[,list(variables=paste(variable, collapse =\" \")),by=ID]\n\n   ID variables\n1:  1        V1\n2:  2     V2 V3\n</code></pre>\n\n<p>If you prefer to see the variables separated by ampersand then use <code>collapse = \"&amp;\"</code></p>\n"
+    },
+    {
+      "tags": [
+        "c++",
+        "global-variables",
+        "registration",
+        "void",
+        "comma-operator"
+      ],
+      "owner": {
+        "reputation": 103816,
+        "user_id": 560648,
+        "user_type": "registered",
+        "accept_rate": 91,
+        "profile_image": "https://www.gravatar.com/avatar/3189f1e006358ec6c65481b9605cd0e3?s=128&d=identicon&r=PG",
+        "display_name": "Lightness Races in Orbit",
+        "link": "http://stackoverflow.com/users/560648/lightness-races-in-orbit"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1391352736,
+      "answer_id": 21511964,
+      "question_id": 21511847,
+      "body": "<p>Because you can't place expressions in empty space floating around in a source file. Only <em>declarations</em>.</p>\n\n<p>This is a common way to force an expression to be evaluated here, even if the resulting object is never actually used afterwards.</p>\n"
+    },
+    {
+      "tags": [
+        "javascript"
+      ],
+      "owner": {
+        "reputation": 94179,
+        "user_id": 965051,
+        "user_type": "registered",
+        "profile_image": "http://i.stack.imgur.com/XgLe7.gif?s=128&g=1",
+        "display_name": "adeneo",
+        "link": "http://stackoverflow.com/users/965051/adeneo"
+      },
+      "is_accepted": false,
+      "score": 3,
+      "creation_date": 1391352715,
+      "answer_id": 21511962,
+      "question_id": 21511946,
+      "body": "<p>Use <code>push()</code></p>\n\n<pre><code>var my_hash_plus = [];   \n\n$.each(my_hash_plus_tmp, function(_, temp) {\n    if (temp.charAt(0) == \"+\") {\n        my_hash_plus.push( temp );\n    }\n});\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "matlab",
+        "cell-array"
+      ],
+      "owner": {
+        "reputation": 2119,
+        "user_id": 2092048,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/e4896d8e38ccff90deda9e8dcf8d7c01?s=128&d=identicon&r=PG",
+        "display_name": "nkjt",
+        "link": "http://stackoverflow.com/users/2092048/nkjt"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1391352712,
+      "answer_id": 21511961,
+      "question_id": 21511225,
+      "body": "<p><code>dlmwrite</code> only handles numeric data. One way around this, if you have Excel, would be to use <code>xlswrite</code> - it can take in (some kinds of) cell arrays directly.</p>\n\n<p><code>xlswrite(outputfile, CondRowDone);</code></p>\n\n<p>Then, do some batch xls to csv conversion (for example, see <a href=\"http://stackoverflow.com/questions/1858195/\">this question</a> and answers). To get a text file directly you'll need to use lower level commands (as in blackbird's answer).</p>\n"
+    },
+    {
+      "tags": [
+        "spring",
+        "spring-mvc",
+        "jpa",
+        "jasper-reports"
+      ],
+      "owner": {
+        "reputation": 570,
+        "user_id": 1157935,
+        "user_type": "registered",
+        "accept_rate": 90,
+        "profile_image": "http://i.stack.imgur.com/hmowG.jpg?s=128&g=1",
+        "display_name": "mserioli",
+        "link": "http://stackoverflow.com/users/1157935/mserioli"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1391348750,
+      "answer_id": 21511295,
+      "question_id": 21508927,
+      "body": "<p>I think you could use and adapt the following code. Put inside a Map your required parameters to populate your query. </p>\n\n<p>Here I show you how to pass a collection or a parameter Map to <code>JasperFillManager</code>.</p>\n\n<pre><code>final String jasperFile = \"file.jasper\";\n\nJasperReport jr = (JasperReport) JRLoader.loadObject(new File(jasperFile));\n\n// to pass collection datasource -&gt; myBeanCollection is a Collection\nJRDataSource jrDataSource = new JRBeanCollectionDataSource(myBeanCollection);\n\n// to pass custom map parameters\nMap&lt;String, Object&gt; map = new HashMap&lt;String, Object&gt;();\nmap.put(\"myParameter\",new Integer(1));          \n\n\nfinal JasperPrint jp = JasperFillManager.fillReport(jr, map, jrDataSource);\nByteArrayOutputStream bos = new ByteArrayOutputStream();\nJasperExportManager.exportReportToPdfStream(jp, bos);\n</code></pre>\n"
+    },
+    {
+      "tags": [
+        "javascript",
+        "jquery"
+      ],
+      "owner": {
+        "reputation": 663,
+        "user_id": 2026065,
+        "user_type": "registered",
+        "accept_rate": 86,
+        "profile_image": "http://i.stack.imgur.com/tszOW.png?s=128&g=1",
+        "display_name": "Abdul Jabbar WebBestow",
+        "link": "http://stackoverflow.com/users/2026065/abdul-jabbar-webbestow"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1391352680,
+      "answer_id": 21511955,
+      "question_id": 11404674,
+      "body": "<p>This is a common Bug in Javascript. you can find many articles around internet specially on SO for event being fired twice. You can try something like this </p>\n\n<pre><code> $(document).on('click', '#task-list li', function(e)\n {\n       alert('Hellow world');\n       e.stopPropagation();\n       return false;\n });\n</code></pre>\n\n<p>And it's definitely Javascript problem because if you hit google and search for <strong>event fire twice</strong> you will see that Angular, Jquery and backbone etc all are somewhere firing events twice or even thrice. So, it's seems that it's javascript behind this. And off course if you search this with Mozilla Developers Network then you can see experts have also said so.</p>\n"
+    },
+    {
+      "tags": [
+        "jquery",
+        "html",
+        "css"
+      ],
+      "owner": {
+        "reputation": 228,
+        "user_id": 1217944,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/dd096ec827ee147b13679591c0661121?s=128&d=identicon&r=PG",
+        "display_name": "Goran.it",
+        "link": "http://stackoverflow.com/users/1217944/goran-it"
+      },
+      "is_accepted": false,
+      "score": 1,
+      "creation_date": 1391351036,
+      "answer_id": 21511678,
+      "question_id": 21511556,
+      "body": "<p>Maybe something like this :</p>\n\n<pre><code>#navBar .navBarInfo {\n    display: inline-block;\n    float:left;\n}\n#navBar .mainNavBar {\n    display: inline-block;\n    float:right;\n}\n</code></pre>\n\n<p><a href=\"http://jsfiddle.net/x8BD3/\" rel=\"nofollow\">Jsfiddle link</a></p>\n\n<p>[EDIT]</p>\n\n<p>Here is updated version as requested/explained in comment:</p>\n\n<p><a href=\"http://jsfiddle.net/U3G94/\" rel=\"nofollow\">JSFIDDLE</a></p>\n"
+    },
+    {
+      "tags": [
+        "core",
+        "dump",
+        "coredump"
+      ],
+      "owner": {
+        "reputation": 34,
+        "user_id": 1291457,
+        "user_type": "registered",
+        "accept_rate": 100,
+        "profile_image": "https://www.gravatar.com/avatar/0c2de53b1653add71f472e35a12b856c?s=128&d=identicon&r=PG",
+        "display_name": "SwanStomp",
+        "link": "http://stackoverflow.com/users/1291457/swanstomp"
+      },
+      "is_accepted": false,
+      "score": 0,
+      "creation_date": 1391352675,
+      "answer_id": 21511953,
+      "question_id": 21287022,
+      "body": "<p>This is most likely a stack space issue. Note that <code>newimage</code> and <code>pixelcounter</code> are being allocated in the stack frame of whatever function these are being declared in. You can quickly run out of space trying to allocate large amount of data. Your 3d array newimage grows as</p>\n\n<p><code>#bytes = newrows * elemets * 3</code></p>\n\n<p>I cleaned up your program (a good piece of advice is to try and present programs that compile, so can people can help you quicker!):</p>\n\n<pre><code>#include &lt;stdio.h&gt;\n#include &lt;stdint.h&gt;\n\nvoid test(size_t newrows, size_t elements) {\n    int32_t newimage[newrows][elements][3];\n    int32_t pixelcounter[newrows][elements];\n\n    //initialize arrays\n\n    for(size_t i=0; i&lt;newrows; i++) {\n        for(size_t j=0; j&lt;elements; j++) {\n            pixelcounter[i][j] = 0;\n            newimage[i][j][0] = 0;\n            newimage[i][j][1] = 0;\n            newimage[i][j][2] = 0;\n        }\n    }\n}\n\nint main(void) {\n    printf(\"Size of integer = %ld\\n\", sizeof(int));\n    for (size_t i = 700; ; i += 10) {\n            printf(\"Testing (%ld, %ld)\\n\", i, i);\n            test(i, i);\n    }\n    return 0;\n}\n</code></pre>\n\n<p>And running this, I see:</p>\n\n<pre><code>Size of integer = 4\nTesting (700, 700)\nTesting (710, 710)\nTesting (720, 720)\nTesting (730, 730)\n[3]    13482 segmentation fault (core dumped)  ./a.out\n</code></pre>\n\n<p>So somewhere between <code>720^2 * 3 * 4</code> and <code>730^2 * 3 * 4</code> bytes, which is about 6 MiB on my 64-bit Linux computer, it might be different on your computer.</p>\n\n<p>The solution in this case is allocate your arrays on the heap, where you will have a lot more memory to work with. More information about heap-allocating multidimensional arrays can be found in <a href=\"http://stackoverflow.com/questions/17584215/how-does-c-allocate-space-for-a-2d-3d-array-when-using-malloc\">How does C allocate space for a 2D (3D...) array when using malloc?</a>.</p>\n"
+    }
+  ],
+  "has_more": true,
+  "quota_max": 10000,
+  "quota_remaining": 9906
+}
+

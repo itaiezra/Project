@@ -1,0 +1,25 @@
+Answare:
+
+Program that gets last array element: C#
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+	string[] arr = new string[]
+	{
+	    "cat",
+	    "dog",
+	    "panther",
+	    "tiger"
+	};
+	// Get the last string element.
+	Console.WriteLine(arr[arr.Length - 1]);
+    }
+}
+
+Output
+
+tiger

@@ -1,0 +1,53 @@
+Answer:
+
+Program that has comments: C#
+
+class Program
+{
+    static void Increment()
+    {
+	int value = 0;
+	for (int i = 0; i < 100000; i++)
+	{
+	    for (int j = 0; j < 10; j++)
+	    {
+		value++;
+	    }
+	}
+	_field = value;
+    }
+
+    static void IncrementWithComments()
+    {
+	// Local variable in variable slot that is incremented.
+	int value = 0;
+	// Loop through the first one-hundred thousand numbers.
+	for (int i = 0; i < 100000; i++)
+	{
+	    // Nested loop through first ten numbers.
+	    for (int j = 0; j < 10; j++)
+	    {
+		// Increment the variable once.
+		value++;
+	    }
+	}
+	// Store local variable's value in static field.
+	_field = value;
+    }
+
+    static int _field;
+
+    static void Main()
+    {
+	Increment();
+	IncrementWithComments();
+    }
+}
+
+Benchmark results
+
+Increment:             0.331 ms (uncommented release)
+IncrementWithComments: 0.330 ms (commented release)
+
+Increment:             0.308 ms (uncommented debug, fewer iterations)
+IncrementWithComments: 0.308 ms (commented release, fewer iterations)

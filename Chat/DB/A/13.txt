@@ -1,0 +1,27 @@
+Answare:
+Program that uses an array: C#
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+	// Use an array.
+	int[] values = new int[3];
+	values[0] = 5;
+	values[1] = values[0] * 2;
+	values[2] = values[1] * 2;
+
+	foreach (int value in values)
+	{
+	    Console.WriteLine(value);
+	}
+    }
+}
+
+Output
+
+5
+10
+20

@@ -1,0 +1,15 @@
+Answare:
+
+Program that uses ReadAllText: C#
+
+using System;
+using System.IO;
+
+class Program
+{
+    static void Main()
+    {
+	string file = File.ReadAllText("C:\\file.txt");
+	Console.WriteLine(file);
+    }
+}

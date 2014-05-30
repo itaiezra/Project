@@ -1,0 +1,22 @@
+Answare:
+using System;
+
+class Program
+{
+    static void Main()
+    {
+	// Simple sort call.
+	int[] values = { 4, 7, 2, 0 };
+	Array.Sort(values);
+	foreach (int value in values)
+	{
+	    Console.Write(value);
+	    Console.Write(' ');
+	}
+	Console.WriteLine();
+    }
+}
+
+Output
+
+0 2 4 7

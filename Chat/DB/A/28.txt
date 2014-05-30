@@ -1,0 +1,14 @@
+Answare:
+
+Program that uses WriteAllText: C#
+
+using System.IO;
+
+class Program
+{
+    static void Main()
+    {
+	File.WriteAllText("C:\\perls.txt",
+	    "Dot Net Perls");
+    }
+}

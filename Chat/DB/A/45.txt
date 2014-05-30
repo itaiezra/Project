@@ -1,0 +1,42 @@
+Answer:
+
+Program that uses for-loop and foreach-loop: C#
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+	// Array of rabbits names.
+	string[] rabbits =
+	{
+	    "Forest Rabbit",
+	    "Dice's Cottontail",
+	    "Brush Rabbit",
+	    "San Jose Brush Rabbit"
+	};
+
+	// Loop through string array with a for-loop.
+	for (int i = 0; i < rabbits.Length; i++)
+	{
+	    // Assign string reference based on induction variable.
+	    string value = rabbits[i];
+	    Console.WriteLine(value); // Write the value.
+	}
+
+	// Loop through the string array with a foreach-loop.
+	foreach (var value in rabbits)
+	{
+	    Console.WriteLine(value); // Write the value.
+	}
+    }
+}
+
+Output
+
+Forest Rabbit
+Dice's Cottontail
+Brush Rabbit
+San Jose Brush Rabbit
+(... Repeated.)

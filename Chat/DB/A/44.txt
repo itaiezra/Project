@@ -1,0 +1,40 @@
+Answer:
+
+Program that uses list and foreach loop: C#
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+	List<int> list = new List<int>();
+	list.Add(1);
+	list.Add(2);
+	list.Add(3);
+	// Loop over list elements using foreach-loop.
+	foreach (int element in list)
+	{
+	    Console.WriteLine(element);
+	}
+	// You can't remove elements in a foreach-loop.
+	try
+	{
+	    foreach (int element in list)
+	    {
+		list.Remove(element);
+	    }
+	}
+	catch (Exception ex)
+	{
+	    Console.WriteLine(ex.Message);
+	}
+    }
+}
+
+Output
+
+1
+2
+3

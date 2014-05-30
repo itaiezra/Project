@@ -1,0 +1,49 @@
+Answer:
+
+Program that uses break in loops: C#
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+	// Array.
+	int[] array = { 5, 10, 15, 20, 25 };
+	Console.WriteLine("--- for-loop and break ---");
+
+	// Loop through indexes in the array.
+	for (int i = 0; i < array.Length; i++)
+	{
+	    Console.WriteLine(array[i]);
+	    if (array[i] == 15) // See if the element has value of 15.
+	    {
+		Console.WriteLine("Value found");
+		break;
+	    }
+	}
+	Console.WriteLine("--- foreach-loop and break ---");
+	foreach (int value in array) // Use foreach loop
+	{
+	    Console.WriteLine(value);
+	    if (value == 15) // See if the iteration variable has value of 15.
+	    {
+		Console.WriteLine("Value found");
+		break;
+	    }
+	}
+    }
+}
+
+Output
+
+--- for-loop and break ---
+5
+10
+15
+Value found
+--- foreach-loop and break ---
+5
+10
+15
+Value found

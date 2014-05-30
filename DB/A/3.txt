@@ -1,0 +1,12 @@
+Answare:
+using System;
+
+public class Hello4
+{
+   public static int Main(string[] args)
+   {
+      Console.WriteLine("Joe");
+      return 0;
+   }
+}
+end.

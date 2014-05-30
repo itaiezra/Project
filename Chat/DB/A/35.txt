@@ -1,0 +1,48 @@
+Answer;
+
+Program that uses true in while-loop: C#
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+	int index = 0;
+	//
+	// Continue looping infinitely until internal condition is met.
+	//
+	while (true)
+	{
+	    int value = ++index;
+	    //
+	    // Check to see if limit it hit.
+	    //
+	    if (value > 5)
+	    {
+		Console.WriteLine("While-loop break");
+		break;
+	    }
+	    //
+	    // You can add another condition.
+	    //
+	    if (value > 100)
+	    {
+		throw new Exception("Never hit");
+	    }
+	    //
+	    // Write to the screen on each iteration.
+	    //
+	    Console.WriteLine("While-loop statement");
+	}
+    }
+}
+
+Output
+
+While-loop statement
+While-loop statement
+While-loop statement
+While-loop statement
+While-loop statement
+While-loop break

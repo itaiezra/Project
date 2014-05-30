@@ -1,0 +1,28 @@
+Answer;
+
+Program that uses do-while loop: C#
+
+class Program
+{
+    static void Main()
+    {
+	int[] ids = new int[] { 6, 7, 8, 10 };
+
+	//
+	// Use do-while loop to sum numbers in 4-element array.
+	//
+	int sum = 0;
+	int i = 0;
+	do
+	{
+	    sum += ids[i];
+	    i++;
+	} while (i < 4);
+
+	System.Console.WriteLine(sum);
+    }
+}
+
+Output
+
+31

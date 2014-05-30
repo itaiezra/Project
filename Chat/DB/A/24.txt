@@ -1,0 +1,16 @@
+Answare:
+
+Program that counts lines: C#
+
+using System.IO;
+
+class Program
+{
+    static void Main()
+    {
+	// Another method of counting lines in a file.
+	// ... This is not the most efficient way.
+	// ... It counts empty lines.
+	int lineCount = File.ReadAllLines("file.txt").Length;
+    }
+}

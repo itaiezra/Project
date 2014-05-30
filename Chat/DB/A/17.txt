@@ -1,0 +1,31 @@
+Answare:
+
+Program that creates string array: C#
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+	// Create string array of four references.
+	string[] array = new string[4];
+	array[0] = "DOT";
+	array[1] = "NET";
+	array[2] = "PERLS";
+	array[3] = 2010.ToString();
+
+	// Display.
+	foreach (string value in array)
+	{
+	    Console.WriteLine(value);
+	}
+    }
+}
+
+Output
+
+DOT
+NET
+PERLS
+2010

@@ -1,0 +1,28 @@
+Answare:
+
+Program that receives array parameter: C#
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+	// Three-element array.
+	int[] array = { -5, -6, -7 };
+	// Pass array to Method.
+	Console.WriteLine(Method(array));
+    }
+
+    /// <summary>
+    /// Receive array parameter.
+    /// </summary>
+    static int Method(int[] array)
+    {
+	return array[0] * 2;
+    }
+}
+
+Output
+
+-10

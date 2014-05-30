@@ -1,0 +1,1 @@
+Question: how properties are declared and used?

@@ -1,0 +1,11 @@
+E:\My Files\Documents\School\PROJECT\Chat\Chat\bin\Debug\Chat.exe.config
+E:\My Files\Documents\School\PROJECT\Chat\Chat\bin\Debug\Chat.exe
+E:\My Files\Documents\School\PROJECT\Chat\Chat\bin\Debug\Chat.pdb
+E:\My Files\Documents\School\PROJECT\Chat\Chat\obj\Debug\Chat.csprojResolveAssemblyReference.cache
+E:\My Files\Documents\School\PROJECT\Chat\Chat\obj\Debug\Chat.Form1.resources
+E:\My Files\Documents\School\PROJECT\Chat\Chat\obj\Debug\Chat.Properties.Resources.resources
+E:\My Files\Documents\School\PROJECT\Chat\Chat\obj\Debug\Chat.csproj.GenerateResource.Cache
+E:\My Files\Documents\School\PROJECT\Chat\Chat\obj\Debug\Chat.exe
+E:\My Files\Documents\School\PROJECT\Chat\Chat\obj\Debug\Chat.pdb
+E:\My Files\Documents\School\PROJECT\Chat\Chat\bin\Debug\Database.mdf
+E:\My Files\Documents\School\PROJECT\Chat\Chat\bin\Debug\Database_log.ldf

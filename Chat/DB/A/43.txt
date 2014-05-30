@@ -1,0 +1,31 @@
+Answer:
+
+Program that uses foreach loop: C#
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static Dictionary<int, int> _h = new Dictionary<int, int>();
+
+    static void Main()
+    {
+	// Add items to dictionary.
+	_h.Add(5, 4);
+	_h.Add(4, 3);
+	_h.Add(2, 1);
+
+	// Standard foreach loop.
+	foreach (KeyValuePair<int, int> pair in _h)
+	{
+	    Console.WriteLine("{0},{1}", pair.Key, pair.Value);
+	}
+    }
+}
+
+Output
+
+5,4
+4,3
+2,1

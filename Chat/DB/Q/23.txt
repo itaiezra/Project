@@ -1,0 +1,1 @@
+Question: How to read a (full) txt file?

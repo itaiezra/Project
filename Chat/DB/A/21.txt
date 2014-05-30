@@ -1,0 +1,22 @@
+Answare:
+
+Program that uses StreamReader, ReadLine: C#
+
+using System.IO;
+
+class Program
+{
+    static void Main()
+    {
+	// Read every line in the file.
+	using (StreamReader reader = new StreamReader("file.txt"))
+	{
+	    string line;
+	    while ((line = reader.ReadLine()) != null)
+	    {
+		// Do something with the line.
+		string[] parts = line.Split(',');
+	    }
+	}
+    }
+}

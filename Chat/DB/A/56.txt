@@ -1,0 +1,34 @@
+Answer:
+
+1.
+
+public System.Collections.IEnumerator GetEnumerator()
+{
+    for (int i = 0; i < 10; i++)
+    {
+        yield return i;
+    }
+}
+
+2.
+
+static void Main()
+{
+    ListClass listClass1 = new ListClass();
+
+    foreach (int i in listClass1)
+    {
+        System.Console.WriteLine(i);
+    }
+}
+
+3.
+
+public System.Collections.IEnumerable SampleIterator(int start, int end)
+{
+    for (int i = start; i <= end; i++)
+    {
+        yield return i;
+    }
+}
+

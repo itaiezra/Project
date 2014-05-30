@@ -1,0 +1,32 @@
+Answer:
+
+Program that uses foreach var loop: C#
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static Dictionary<int, int> _f = new Dictionary<int, int>();
+
+    static void Main()
+    {
+	// Add items to dictionary.
+	_f.Add(1, 2);
+	_f.Add(2, 3);
+	_f.Add(3, 4);
+
+	// Use var in foreach loop.
+	foreach (var pair in _f)
+	{
+	    Console.WriteLine("{0},{1}", pair.Key, pair.Value);
+	}
+    }
+}
+
+Output
+
+1,2
+2,3
+3,4
+

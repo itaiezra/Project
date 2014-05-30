@@ -1,0 +1,31 @@
+Answer:
+
+Program that uses foreach with LINQ query: C#
+
+using System;
+using System.Linq;
+
+class Program
+{
+    static void Main()
+    {
+	// An unsorted string array.
+	string[] letters = { "d", "c", "a", "b" };
+	// Use LINQ query syntax to sort the array alphabetically.
+	var sorted = from letter in letters
+		     orderby letter
+		     select letter;
+	// Loop with the foreach keyword.
+	foreach (string value in sorted)
+	{
+	    Console.WriteLine(value);
+	}
+    }
+}
+
+Output
+
+a
+b
+c
+d

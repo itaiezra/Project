@@ -1,0 +1,30 @@
+Answer;
+
+Program that uses no brackets: C#
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+	int value = 1;
+	int size = 2;
+
+	if (value == 1)
+	    if (size == 2)
+		Console.WriteLine("1, 2");
+
+	if (value == 0)
+	    Console.WriteLine("0"); // Not reached.
+	else
+	    Console.WriteLine("Not 0"); // Reached.
+
+	if (value == 2) Console.WriteLine("2"); // Not reached.
+    }
+}
+
+Output
+
+1, 2
+Not 0

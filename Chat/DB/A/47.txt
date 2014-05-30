@@ -1,0 +1,39 @@
+Answer:
+
+Program that uses loop and switch with break: C#
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+	for (int i = 0; i < 5; i++) // Loop through five numbers.
+	{
+	    switch (i) // Use loop index as switch expression.
+	    {
+		case 0:
+		case 1:
+		case 2:
+		    {
+			Console.WriteLine("First three");
+			break;
+		    }
+		case 3:
+		case 4:
+		    {
+			Console.WriteLine("Last two");
+			break;
+		    }
+	    }
+	}
+    }
+}
+
+Output
+
+First three
+First three
+First three
+Last two
+Last two

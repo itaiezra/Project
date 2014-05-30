@@ -1,0 +1,5 @@
+E:\My Files\Documents\School\PROJECT\KeyWord_Extractor\SemanticLibrary\bin\Debug\SemanticLibrary.dll
+E:\My Files\Documents\School\PROJECT\KeyWord_Extractor\SemanticLibrary\bin\Debug\SemanticLibrary.pdb
+E:\My Files\Documents\School\PROJECT\KeyWord_Extractor\SemanticLibrary\obj\Debug\SemanticLibrary.csprojResolveAssemblyReference.cache
+E:\My Files\Documents\School\PROJECT\KeyWord_Extractor\SemanticLibrary\obj\Debug\SemanticLibrary.dll
+E:\My Files\Documents\School\PROJECT\KeyWord_Extractor\SemanticLibrary\obj\Debug\SemanticLibrary.pdb

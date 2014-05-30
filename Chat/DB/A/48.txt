@@ -1,0 +1,52 @@
+Answer:
+
+Program that uses continue keyword: C#
+
+using System;
+using System.Threading;
+
+class Program
+{
+    static void Main()
+    {
+	Random random = new Random();
+	while (true)
+	{
+	    // Get a random number.
+	    int value = random.Next();
+	    // If number is divisible by two, skip the rest of the iteration.
+	    if ((value % 2) == 0)
+	    {
+		continue;
+	    }
+	    // If number is divisible by three, skip the rest of the iteration.
+	    if ((value % 3) == 0)
+	    {
+		continue;
+	    }
+	    Console.WriteLine("Not divisible by 2 or 3: {0}", value);
+	    // Pause.
+	    Thread.Sleep(100);
+	}
+    }
+}
+
+Output
+
+Not divisible by 2 or 3: 710081881
+Not divisible by 2 or 3: 1155441983
+Not divisible by 2 or 3: 1558706543
+Not divisible by 2 or 3: 1531461115
+Not divisible by 2 or 3: 64503937
+Not divisible by 2 or 3: 498668099
+Not divisible by 2 or 3: 85365569
+Not divisible by 2 or 3: 184007165
+Not divisible by 2 or 3: 1759735855
+Not divisible by 2 or 3: 1927432795
+Not divisible by 2 or 3: 648758581
+Not divisible by 2 or 3: 1131091151
+Not divisible by 2 or 3: 1931772589
+Not divisible by 2 or 3: 283344547
+Not divisible by 2 or 3: 1727688571
+Not divisible by 2 or 3: 64235879
+Not divisible by 2 or 3: 818135261...

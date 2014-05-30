@@ -1,0 +1,20 @@
+Answare:
+The foreach statement can be used to iterate over an array or over a .NET Framework collection class. It provides a simple way to iterate over collections.
+
+// cmdline2.cs
+// arguments: John Paul Mary
+using System;
+
+public class CommandLine2
+{
+   public static void Main(string[] args)
+   {
+       Console.WriteLine("Number of command line parameters = {0}",
+          args.Length);
+       foreach(string s in args)
+       {
+          Console.WriteLine(s);
+       }
+   }
+}
+

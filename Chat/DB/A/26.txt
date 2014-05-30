@@ -1,0 +1,26 @@
+Answare:
+
+Program that writes array to file: C#
+
+using System.IO;
+
+class Program
+{
+    static void Main()
+    {
+	// Write a string array to a file.
+	string[] stringArray = new string[]
+	{
+	    "cat",
+	    "dog",
+	    "arrow"
+	};
+	File.WriteAllLines("file.txt", stringArray);
+    }
+}
+
+Results: file.txt
+
+cat
+dog
+arrow

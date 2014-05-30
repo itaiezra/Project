@@ -1,0 +1,1 @@
+Question: how to print command line arguments?

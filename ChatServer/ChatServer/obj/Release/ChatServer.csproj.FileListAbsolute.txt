@@ -1,0 +1,5 @@
+E:\My Files\Documents\School\PROJECT\ChatServer\ChatServer\bin\Release\ChatServer.dll
+E:\My Files\Documents\School\PROJECT\ChatServer\ChatServer\bin\Release\ChatServer.pdb
+E:\My Files\Documents\School\PROJECT\ChatServer\ChatServer\obj\Release\ChatServer.csprojResolveAssemblyReference.cache
+E:\My Files\Documents\School\PROJECT\ChatServer\ChatServer\obj\Release\ChatServer.dll
+E:\My Files\Documents\School\PROJECT\ChatServer\ChatServer\obj\Release\ChatServer.pdb

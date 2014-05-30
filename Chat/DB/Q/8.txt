@@ -1,0 +1,1 @@
+Question: how do I use and declare properties?

@@ -1,0 +1,9 @@
+C:\Users\Itai\Desktop\kw\bin\Debug\kw.exe.config
+E:\My Files\Documents\School\PROJECT\KeyWord_Extractor\kw\bin\Debug\kw.exe.config
+E:\My Files\Documents\School\PROJECT\KeyWord_Extractor\kw\bin\Debug\kw.exe
+E:\My Files\Documents\School\PROJECT\KeyWord_Extractor\kw\bin\Debug\kw.pdb
+E:\My Files\Documents\School\PROJECT\KeyWord_Extractor\kw\bin\Debug\SemanticLibrary.dll
+E:\My Files\Documents\School\PROJECT\KeyWord_Extractor\kw\bin\Debug\SemanticLibrary.pdb
+E:\My Files\Documents\School\PROJECT\KeyWord_Extractor\kw\obj\Debug\kw.csprojResolveAssemblyReference.cache
+E:\My Files\Documents\School\PROJECT\KeyWord_Extractor\kw\obj\Debug\kw.exe
+E:\My Files\Documents\School\PROJECT\KeyWord_Extractor\kw\obj\Debug\kw.pdb

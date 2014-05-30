@@ -1,0 +1,32 @@
+Answer;
+
+Program that uses foreach over array: C#
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+	// Use a string array to loop over.
+	string[] ferns =
+	{
+	    "Psilotopsida",
+	    "Equisetopsida",
+	    "Marattiopsida",
+	    "Polypodiopsida"
+	};
+	// Loop with the foreach keyword.
+	foreach (string value in ferns)
+	{
+	    Console.WriteLine(value);
+	}
+    }
+}
+
+Output
+
+Psilotopsida
+Equisetopsida
+Marattiopsida
+Polypodiopsida
