@@ -62,6 +62,7 @@ namespace Chat
                         if (j == 5)
                         {
                             finalAnswer = db.findAnswer(returningAnswers);
+                            clearReturningAnswers();
                             answare(finalAnswer);
                             return;
                         }
@@ -89,6 +90,7 @@ namespace Chat
                 if (j != 0)
                 {
                     finalAnswer = db.findAnswer(returningAnswers);
+                    clearReturningAnswers();
                     answare(finalAnswer);
                 }
                 else
@@ -211,6 +213,11 @@ namespace Chat
                 }
             }
             return posibleAnswares;
+        }
+        public static void clearReturningAnswers()
+        {
+            for (int i = 0; i < 5; i++)
+                returningAnswers[i] = 0;
         }
     }
 }
