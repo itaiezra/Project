@@ -155,6 +155,50 @@ namespace Chat
 
             
         }
+        public int haveAnswer(string q)
+        {
+            SqlConnection conn = new SqlConnection(abc.ToString());
+
+            int answerNum = 0;
+            string[] Questions = getAllQuestions();
+            for (int i=0;i<Questions.Length;i++)
+            {
+                if (q.Equals(Questions[i]))
+                {
+                    answerNum = i;
+                    break;
+                }
+            }
+            return answerNum;
+        }
+        public string getAnswer(int a)
+        {
+            SqlConnection conn = new SqlConnection(abc.ToString());
+
+            
+            string answer = "";
+            using (conn)
+            {
+                
+                    SqlCommand command = new SqlCommand("SELECT * FROM dbo.Table_Answer WHERE Id =" + a, conn);
+                    conn.Open();
+                    SqlDataReader read = command.ExecuteReader();
+                    if (read.HasRows)
+                        while (read.Read())
+                        {
+                            answer += System.Environment.NewLine;
+                            answer += read.GetString(1);
+                            answer += System.Environment.NewLine;
+
+
+                        }
+                    conn.Close();
+                
+            }
+            conn.Close();
+
+            return answer;
+        }
     }
 }
 

@@ -52,58 +52,67 @@ namespace Chat
         {
 
             DBHandler db = new DBHandler();
+            int fastAnswer = db.haveAnswer(question);
 
-            if (keyWords(question) != "")
+            if(fastAnswer==0)
             {
-                int counter = 1, numOfKeyWords = keyWordsArray.Length, i = 0, j = 0, numOfRows = db.numOfRows("dbo.Table_Questions");
-                while (counter < numOfRows)
+                if (keyWords(question) != "")
                 {
-                    while (i < numOfKeyWords)
+                    int counter = 1, numOfKeyWords = keyWordsArray.Length, i = 0, j = 0, numOfRows = db.numOfRows("dbo.Table_Questions");
+                    while (counter < numOfRows)
                     {
-                        if (j == 5)
+                        while (i < numOfKeyWords)
                         {
-                            finalAnswer = db.findAnswer(returningAnswers);
-                            clearReturningAnswers();
-                            answare(finalAnswer);
-                            return;
-                        }
-                        if (keyWordsArray[i] == null)
-                        {
-                            i = 0;
-                            break;
-                        }
-                        string a = db.findQuestion(counter);
-                        string b = keyWordsArray[i];
-                        if (a.Contains(b))
-                        {
-                            returningAnswers[j] = counter;
-                            j++;
-                            i = 0;
-                            break;
+                            if (j == 5)
+                            {
+                                finalAnswer = db.findAnswer(returningAnswers);
+                                clearReturningAnswers();
+                                answare(finalAnswer);
+                                return;
+                            }
+                            if (keyWordsArray[i] == null)
+                            {
+                                i = 0;
+                                break;
+                            }
+                            string a = db.findQuestion(counter);
+                            string b = keyWordsArray[i];
+                            if (a.Contains(b))
+                            {
+                                returningAnswers[j] = counter;
+                                j++;
+                                i = 0;
+                                break;
+                            }
+
+                            i++;
+
                         }
 
-                        i++;
+                        counter++;
+                    }
+                    if (j != 0)
+                    {
+                        finalAnswer = db.findAnswer(returningAnswers);
+                        clearReturningAnswers();
+                        answare(finalAnswer);
+                    }
+                    else
+                    {
+                        answare("");
 
                     }
-
-                    counter++;
-                }
-                if (j != 0)
-                {
-                    finalAnswer = db.findAnswer(returningAnswers);
-                    clearReturningAnswers();
-                    answare(finalAnswer);
                 }
                 else
                 {
                     answare("");
-
                 }
             }
             else
             {
-                answare("");
+                answare(db.getAnswer(fastAnswer));
             }
+
         }
         public void answare(string a)
         {
