@@ -53,7 +53,7 @@ namespace Chat
         {
             SqlConnection conn = new SqlConnection(abc.ToString());
 
-            string[] allQuestions = null;
+            string[] allQuestions = new string[numOfRows("dbo.Table_Questions")];
             using (conn)
             {
                 int i = 0;
