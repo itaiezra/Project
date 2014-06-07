@@ -45,6 +45,7 @@ namespace Chat
             question = textBox2.Text;
             textBox2.Text = "";
             calc();
+            
 
         }
         public void calc()
@@ -54,7 +55,7 @@ namespace Chat
 
             if (keyWords(question) != "")
             {
-                int counter = 1, numOfKeyWords = keyWordsArray.Length, i = 0, j = 0, numOfRows = db.numOfRows();
+                int counter = 1, numOfKeyWords = keyWordsArray.Length, i = 0, j = 0, numOfRows = db.numOfRows("dbo.Table_Questions");
                 while (counter < numOfRows)
                 {
                     while (i < numOfKeyWords)
@@ -112,10 +113,16 @@ namespace Chat
             textBox1.Text += keyWords(question);
             textBox1.Text += System.Environment.NewLine;
             textBox1.Text += System.Environment.NewLine;
-            if(a=="")
+            if (a == "")
                 textBox1.Text += "We could not find an answe to your question in our DB.";
             else
+            {
                 textBox1.Text += a;
+                button2.Visible = true;
+                button3.Visible = true;
+                label1.Visible = true;
+                label2.Visible = true;
+            }
 
         }
         public static string keyWords(string question)
@@ -177,47 +184,31 @@ namespace Chat
             return keyWords;
         }
 
-        public static string[] Extractor()
-        {
-
-            string[] posibleAnswares = new string[5];
-            int numOfPosibleAnswares = 0;
-            // bool exists = false;
-            string keyWord;
-            string newQuestion = "";
-            for (fileNumber = 1; fileNumber <= NUM_OF_FILES; fileNumber++)
-            {
-                for (int i = 0; i < 20; i++)
-                {
-                    fileName = fileNumber + ".txt";
-                    keyWord = keyWordsArray[i];
-                    if (keyWord == "-0-")
-                        break;
-                    /*
-                    exists = (from line in File.ReadAllLines(@"E:\My Files\Documents\School\PROJECT\Chat\DB\Q\" + fileName)
-                              where line == keyWord
-                              select line).Count() > 0;
-                     
-                    if (exists)
-                    */
-                    newQuestion = File.ReadAllText(@"E:\My Files\Documents\School\PROJECT\Chat\DB\Q\" + fileName);
-                    if (newQuestion.Contains(keyWord))
-                    {
-                        posibleAnswares[numOfPosibleAnswares] = fileName;
-                        numOfPosibleAnswares++;
-                        if (numOfPosibleAnswares == 5)
-                            return posibleAnswares;
-                        break;
-                        // exists = false;
-                    }
-                }
-            }
-            return posibleAnswares;
-        }
+        
         public static void clearReturningAnswers()
         {
             for (int i = 0; i < 5; i++)
                 returningAnswers[i] = 0;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DBHandler db = new DBHandler();
+            db.feedback(question, finalAnswer, 1);
+            button2.Visible = false;
+            button3.Visible = false;
+            label1.Visible = false;
+            label2.Visible = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DBHandler db = new DBHandler();
+            db.feedback(question, finalAnswer, 0);
+            button2.Visible = false;
+            button3.Visible = false;
+            label1.Visible = false;
+            label2.Visible = false;
         }
     }
 }

@@ -110,7 +110,7 @@ namespace Chat
 
             return answer;
         }
-        public int numOfRows()
+        public int numOfRows(string table)
         {
             SqlConnection conn = new SqlConnection(abc.ToString());
 
@@ -118,7 +118,7 @@ namespace Chat
             using (conn)
             {
 
-                SqlCommand command = new SqlCommand("SELECT * FROM dbo.Table_Questions", conn);
+                SqlCommand command = new SqlCommand("SELECT * FROM " + table, conn);
                 conn.Open();
                 SqlDataReader read = command.ExecuteReader();
                 if (!read.HasRows)
@@ -132,6 +132,20 @@ namespace Chat
             conn.Close();
 
             return numOfRows;
+        }
+        public void feedback(string q, string a, int yn)
+        {
+            SqlConnection conn = new SqlConnection(abc.ToString());
+            int rowNumber = numOfRows("dbo.Table_Feedback");
+            rowNumber++;
+            using (conn)
+            {
+                
+                SqlCommand command = new SqlCommand("INSERT INTO [dbo].[Table_Feedback] ([Id], [Question], [Answer], [Helpful]) VALUES ("+rowNumber+", N'"+q+"', N'"+a+"', "+yn+")", conn);
+                conn.Open();
+            }
+            conn.Close();
+            
         }
     }
 }
