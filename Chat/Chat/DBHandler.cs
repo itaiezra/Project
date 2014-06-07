@@ -141,10 +141,18 @@ namespace Chat
             using (conn)
             {
                 
-                SqlCommand command = new SqlCommand("INSERT INTO [dbo].[Table_Feedback] ([Id], [Question], [Answer], [Helpful]) VALUES ("+rowNumber+", N'"+q+"', N'"+a+"', "+yn+")", conn);
+              //  SqlCommand command = new SqlCommand("INSERT INTO [dbo].[Table_Feedback] ([Id], [Question], [Answer], [Helpful]) VALUES ("+rowNumber+", N'"+q+"', N'"+a+"', "+yn+")", conn);
+                SqlCommand command = new SqlCommand("INSERT INTO [dbo].[Table_Feedback] ([Id], [Question], [Answer], [Helpful]) VALUES (@rowNumber, @QUestion, @Answer, @Helpful)", conn);
+                command.Connection = conn;
+                command.Parameters.AddWithValue("@rowNumber", rowNumber);
+                command.Parameters.AddWithValue("@QUestion", q);
+                command.Parameters.AddWithValue("@Answer", a);
+                command.Parameters.AddWithValue("@Helpful", yn);
                 conn.Open();
+                command.ExecuteNonQuery();
             }
             conn.Close();
+
             
         }
     }
