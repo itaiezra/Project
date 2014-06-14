@@ -165,7 +165,7 @@ namespace Chat
             {
                 if (q.Equals(Questions[i]))
                 {
-                    answerNum = i;
+                    answerNum = i+1;
                     break;
                 }
             }
@@ -198,6 +198,47 @@ namespace Chat
             conn.Close();
 
             return answer;
+        }
+
+        public string advancedSearch(string[] keyWordsArray)
+        {
+            string temp = "";
+            string[] allQuestions = getAllQuestions();
+            int[] answerRating = new int[allQuestions.Length];
+            int max = 0;
+
+            for (int i = 0; i < allQuestions.Length; i++)
+                for (int j = 0; j < keyWordsArray.Length;j++)
+                {
+                    if (keyWordsArray[j] == "-0-")
+                        break;
+                    if (allQuestions[i].Contains(keyWordsArray[j]))
+                        answerRating[i]++;
+                }
+
+            int[] bestAnswers = new int[5];
+
+            for (int i = 0; i < answerRating.Length;i++)
+            {
+                if (max < answerRating[i])
+                    max = answerRating[i];
+            }
+            int location = 0;
+            int tempMax = max;
+            for (int i = 0; i < answerRating.Length; i++)
+                for (tempMax = max; tempMax > 0; tempMax-- )
+                    if(answerRating[i]==max)
+                    {
+                        bestAnswers[location] = i + 1;
+                        if (location == 4)
+                        {
+                            temp = findAnswer(bestAnswers);
+                            return temp;
+                        }
+                    }
+
+            temp = findAnswer(bestAnswers);
+            return temp;
         }
     }
 }

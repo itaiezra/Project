@@ -44,8 +44,24 @@ namespace Chat
             textBox1.Text += "\r\n" + textBox2.Text;
             question = textBox2.Text;
             textBox2.Text = "";
-            calc();
-            
+           // calc();
+            DBHandler db = new DBHandler();
+            int fastAnswer = db.haveAnswer(question);
+            if (fastAnswer == 0)
+            {
+                if (keyWords(question) != "")
+                {
+                    finalAnswer = db.advancedSearch(keyWordsArray);
+                    answare(finalAnswer);
+                }
+            }
+            else
+            {
+                finalAnswer = db.getAnswer(fastAnswer);
+                answare(finalAnswer);
+
+            }
+
 
         }
         public void calc()
