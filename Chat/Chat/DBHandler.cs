@@ -225,9 +225,23 @@ namespace Chat
             }
             int location = 0;
             int tempMax = max;
-            for (int i = 0; i < answerRating.Length; i++)
+       /*     for (int i = 0; i < answerRating.Length; i++)
                 for (tempMax = max; tempMax > 0; tempMax-- )
                     if(answerRating[i]==tempMax)
+                    {
+                        bestAnswers[location] = i + 1;
+                        if (location == 4)
+                        {
+                            temp = findAnswer(bestAnswers);
+                            return temp;
+                        }
+                        location++;
+                    }
+            */
+            for (tempMax = max; tempMax > 0; tempMax--)
+                for (int i = 0; i < answerRating.Length; i++)
+               
+                    if (answerRating[i] == tempMax)
                     {
                         bestAnswers[location] = i + 1;
                         if (location == 4)
